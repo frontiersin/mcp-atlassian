@@ -20,6 +20,11 @@ confluence_mcp = FastMCP(
     description="Provides tools for interacting with Atlassian Confluence.",
 )
 
+@confluence_mcp.tool(tags={"confluence", "read"})
+async def test(
+    ctx: Context,
+) -> str:
+    return "Hello, world from confluence!"
 
 @confluence_mcp.tool(tags={"confluence", "read"})
 async def search(
